@@ -25,3 +25,18 @@ document.querySelector('#root').innerHTML = render(
    
   </div>
 );
+
+const navToggle = document.querySelector(".nav-btn")
+const mobilNav = document.querySelector('.rollout-nav')
+
+// const navToggle = () => {
+//   navMenu.classList.toggle('nav-closed')
+// }
+
+navToggle.addEventListener('click', () => {
+  mobilNav.classList.toggle('nav-closed');
+}),
+
+mobilNav.addEventListener('click', () => {
+  mobilNav.classList.add('nav-closed')
+});
