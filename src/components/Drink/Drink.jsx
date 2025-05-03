@@ -1,5 +1,7 @@
 import './Drink.css'
-export const Drink = ({ name, image}) => {
+import { Layer } from '../Layer/Layer';
+
+export const Drink = ({ name, image, layers}) => {
     return (
         <div className="drink">
         <div className="drink__product">
@@ -8,10 +10,8 @@ export const Drink = ({ name, image}) => {
           </div>
           <div className="drink__info">
             <h3>{name}</h3>
-            <div className="layer">
-              <div className="layer__color" style={{ backgroundColor: '#613916' }}></div>
-              <div className="layer__label">{name}</div>
-            </div>
+             
+            {layers.map(layer => <Layer color= {layer.color} label ={layer.label} key={layer.label}/>)}
           </div>
         </div>
         <form className="drink__controls">

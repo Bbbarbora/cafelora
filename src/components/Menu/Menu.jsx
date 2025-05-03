@@ -18,7 +18,7 @@ export const Menu = () => {
               { color: '#fbdf5b', label: 'citrón' },
               { color: '#613916', label: 'espresso' },
             ]}
-          />
+  />
 
     <div className="drink">
       <div className="drink__product">
